@@ -17,7 +17,7 @@
                   echo "##### Terraform Applying the Changes ####"
                   sh '''#!/bin/bash -e
                   terraform init
-                  terraform apply --auto-approve -var-file=deployment_configuration.tfvars'''
+                  terraform apply --auto-approve '''
                 }
 
               } else {
@@ -26,7 +26,7 @@
                     echo "##### Terraform Plan (Check) the Changes #####"
                     sh '''#!/bin/bash -e
                     terraform init
-                    terraform plan -var-file=deployment_configuration.tfvars'''
+                    terraform plan '''
                   }
 
               }
@@ -47,7 +47,7 @@
                 echo "##### Terraform Destroing #####"
                 sh '''#!/bin/bash -e
                 terraform init
-                terraform destroy --auto-approve -var-file=deployment_configuration.tfvars'''
+                terraform destroy --auto-approve '''
                 }
               }
            }
