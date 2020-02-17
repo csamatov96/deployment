@@ -17,7 +17,7 @@
                   echo "##### Terraform Applying the Changes ####"
                   sh '''#!/bin/bash -e
                   terraform init
-                  terraform apply --auto-approve '''
+                  terraform apply --auto-approve ''' //
                 }
 
               } else {
